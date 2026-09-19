@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-18">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Diwali festival</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+body { 
+font-family: arial, sans-serif;
+background: #FAF3E0;
+color: #2B2B2B;
+}
+/* Navigation */
+nav { 
+background: #641010;
+padding: 15px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+nav a {
+color: #FFF8E7;
+text-decoration: none;
+margin: 0 15px;
+font-size: 17px;
+font-weight: bold;
+}
+nav a:hover {
+color: #D4AF37;
+}
+/* home */
+.home {
+min-height: 90vh;
+background: linear-gradient(
+           rgba(70, 10, 10, 0.65),
+           rgba(70, 10, 10, 0.65)
+),
+url("https://unsplash.com/photos/a-group-of-lit-candles-sitting-on-top-of-a-table-7ATan8q_kAc");
+background-size: cover;
+background-position: center;
+display: flex;
+align-item: center;
+justify-content: center;
+text-align: center;
+color: white;
+padding: 30px;
+}
+.home-content h1 {
+font-size: 60px;
+color: #D4AF37;
+margin-bottom: 15px;
+animation: glow 2s infinite alternate;
+}
+.home-content p {
+font-size: 22px;
+margin-bottom: 25px;
+}
+.btn {
+display: inline-block;
+background: #D97706;
+color: white;
+padding: 14px 25px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+}
+.btn:hover {
+background: #D97706;
+}
+@keyframes glow {
+from {
+text-shadow: 0 0 5px #FFF8E7;
+}
+to {
+text-shadow: 0 0 25px #F4C430;
+             0 0 40px #F59E0B;
+}
+}
+/* common section */
+section { 
+padding: 60px 8%;
+}
+.title {
+text-align: center;
+color: #7A1010;
+font-size: 36px;
+margin-bottom: 35px;
+}
+/* about */
+.about {
+display: flex;
+gap: 40px;
+align-items: center;
+flex-wrap: wrap;
+}
+.about img {
+width: 45%;
+min-width: 280px;
+border-radius: 20px;
+box-shadow: 0 5px 20px gray;
+}
+.about-text {
+flex: 1;
+min-width: 280px;
+}
+.about-text h2 {
+color: #C65D00;
+margin-bottom: 15px;
+}
+.about-text p {
+line-height: 1.8;
+font-size: 17px;
+}
+/* reason */
+.reason {
+background: #FFF4D6;
+}
+.reason-box {
+max-width: 900px;
+margin: auto;
+background: white;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 5px 15px #BDBDBD;
+line-height: 1.8;
+}
+/* celebration cards */
+.cards {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap;
+}
+.card {
+background: white;
+width: 270px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px #BDBDBD;
+transition: 0.3s;
+}
+.card:hover {
+transform: translate(-10px);
+}
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+.card-content {
+padding: 20px;
+text-align: center;
+}
+.card-content h3 {
+color: #A84300;
+margin-bottom: 10px;
+}
+/* table */
+.table-section {
+background: #FFE8A3;
+}
+table {
+width: 90%;
+margin: auto;
+border-collapse: collapse;
+background: white;
+box-shadow: 0 5px 15px #BDBDBD;
+}
+th, td {
+padding: 15px;
+border: 1px solid #D1D1D1;
+text-align: center; 
+}
+th {
+background: #800000;
+color: white;
+}
+tr:hover {
+background: #FFF4D6;
+}
+/* gallery */
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap:20px;
+}
+.gallery img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 15px;
+transition: 0.4s;
+}
+.gallery img:hover {
+transform: scale(1.05);
+}
+/* contact */
+.contact {
+text-align: center;
+background: #5b0a0a;
+color: white;
+}
+.contact h2 {
+color: #ffd700;
+margin-bottom: 20px;
+}
+/* footer */
+footer {
+background: #260000;
+color: white;
+text-align: center;
+padding: 20px;
+}
+footer span {
+color: #ffd700;
+}
+/* mobile */
+@media (max-width: 700px) {
+nav a { 
+display: inline-block;
+margin: 7px;
+font-size: 14px;
+}
+.home-content h1 {
+font-size: 40px;
+}
+.home-content p {
+font-size: 17px;
+}
+.about img {
+width: 100%;
+font-size: 13px;
+}
+}
+</style>
+</head>
+<!-- Navigation -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#reason">Reason</a>
+<a href="#celebration">Celebration</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Home -->
+<section class="home" id="home">
+<div class="home-content">
+<h1>🪔 Happy Diwali 🪔</h1>
+<p>
+Festival of Lights, Happiness & Togetherness
+</p>
+<a href="#about" class="btn">
+Explore Diwali
+</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2 class="title">About Diwali</h2>
+<div class="about">
+<img src="diyas.jpg"
+ alt="Diwali Diyas">  
+<div class="about-text">
+<h2>🪔 The Festival of Lights</h2>
+<p>
+Diwali, also known as Deepavali, is one of the most celebrated festivals in India. It is known as the Festival of Lights.
+</p>
+<br>
+<p>
+People decorate their homes with diyas, candles, rangoli and beautiful lights. Families come together, exchange sweets and gifts, and celebrate happiness and togetherness.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Reason -->
+<section class="reason" id="reason">
+<h2 class="title">Why DO We Celebrate Diwali?</h2>
+<div class="reason-box">
+<p>
+Diwali has great cultural and religious importance.
+In the Ramayana tradition, it is associated with the return of Lord Rama, Sita and Lakshmana to Ayodhya after a long period away from their kingdon.
+</p>
+<br>
+<p>
+People lights diyas to symbolize light overcooming darkness and good overcoming evil. Diwali is also celebrated in different ways across India and is associated with prosperity, new beginnings and family gatherings.
+</p>
+</div>
+</section>
+
+<!-- Celebration -->
+<section id="celebration">
+<h2 class="title">Diwali Celebration</h2>
+<div class="cards">
+<div class="card">
+<img src="rangoli.jpg" alt="Diya">
+<div class="card-content">
+<h3>🪔 Lighting Diyas</h3>
+<p>
+Homes are decorated with beautiful diyas and lamps.
+</p>
+</div>
+</div>
+<div class="card">
+<img src="rangolii.jpg" alt="rangoli">
+<div class="card-content">
+<h3>🌸 Rangoli</h3>
+<p>
+Colorful rangoli designs are made to decorate homes and entrances.
+</p>
+</div>
+</div>
+<div class="card">
+<img src="lights.jpg" alt="Diwali Lights">
+<div class="card-content">
+<h3>✨ Decoration</h3>
+<p>
+Houses and streets are decorated with beautiful lights.
+</P>
+</div>
+</div>
+<div class="card">
+<img src="s.jpg" alt="Festival sweets">
+<div class="card-content">
+<h3>🍬 Sweets & Gifts</h3>
+<p>
+Families share sweets and giftes with friends and relatives.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Table -->
+<section class="table-section">
+<h2 class="title">Diwali Activities</h2>
+<table>
+<tr>
+<th>Activity</th>
+<th>Purpose</th>
+<th>Feeling</th>
+</tr>
+<tr>
+<td>Lighting Diyas</td>
+<td>Symbol of Light</td>
+<td>Hope</td>
+</tr>
+<tr>
+<td>Rangoli</td>
+<td>Home Decoration</td>
+<td>Creativity</td>
+</tr>
+<tr>
+<td>Sharing Sweets</td>
+<td>Spread Happiness</td>
+<td>Joy</td>
+</tr>
+<tr>
+<td>Family gathering</td>
+<td>Togetherness</td>
+<td>Love</td>
+</tr>
+</table>
+</section>
+<!-- Gallery -->
+<section id="gallery">
+<h2 class="title">Diwali Gallery</h2>
+<div class="gallery">
+<img src="d.jpg" alt="Diwali">
+<img src="f.jpg" alt="Festival">
+<img src="l.jpg" alt="Lights">
+<img src="sw.jpg" alt="Sweets">
+</div>
+</section>
+<!-- section -->
+<section class="contact" id="contact">
+<h2>🪔 Happy Diwali 🪔</h2>
+<p>
+May this Diwali bring happiness, peace, prosperity and success to everyone.
+</p>
+<br>
+<p>
+ ✨ Celebrate with Love • Spread Happiness • Light Up Lives ✨
+</p>
+</section>
+<!-- Footer -->
+<footer>
+<p>
+ © 2026 <span>Diwali Festival</span> |
+        Designed with ❤️ using HTML & CSS
+
+</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
